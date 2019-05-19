@@ -1,0 +1,19 @@
+{
+  "name": "tbc-finder",
+  "version": "0.0.1",
+  "description": "POC - creates a search index and exposes a service for using it",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapolonio/tbc.git"
+  },
+  "author": "mapolonio@ug.uchile.cl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapolonio/tbc/issues"
+  },
+  "homepage": "https://github.com/mapolonio/tbc#readme"
+}
