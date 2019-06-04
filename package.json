@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
+    "dev": "NODE_ENV=development nodemon --inspect index.js",
     "build": "webpack"
   },
   "repository": {
@@ -23,7 +24,11 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "nodemon": "^1.19.1",
     "webpack": "^4.32.0",
     "webpack-cli": "^3.3.2"
+  },
+  "nodemonConfig": {
+    "ignore": ["public/js/*", "src/index.js"]
   }
 }
