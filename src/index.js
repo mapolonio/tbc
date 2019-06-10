@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-// import Results from './Results.vue';
+import "whatwg-fetch";
 
 new Vue({
   el: "#app",

@@ -2,11 +2,11 @@
   <div id="app">
     <h1>Hello World! "{{ message }}"</h1>
     <h1>Welcome to TBC Finder</h1>
-    <form method="GET">
-      <input type="text" placeholder="Shirt" name="search">
+    <form v-on:submit="doSearch">
+      <input v-model="query" placeholder="Shirt">
       <button type="submit">Search</button>
     </form>
-    <form method="POST">
+    <form v-on:submit="updateIndex">
       <p>Upload your file to create the search index:</p>
       <p>
         <input type="file">
@@ -23,6 +23,39 @@ export default {
   name: "app",
   data() {
     return { message: "congratulations" };
+  },
+  methods: {
+    doSearch: function(event) {
+      event.preventDefault();
+
+      fetch("/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({})
+      })
+        .then(response => response.json())
+        .then(console.log)
+        .catch(function(err) {
+          console.log(err);
+        });
+    },
+    updateIndex: function(event) {
+      event.preventDefault();
+
+      fetch("/create-index", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({})
+      })
+        .then(() => console.log("Index updated"))
+        .catch(function(err) {
+          console.log(err);
+        });
+    }
   }
 };
 </script>

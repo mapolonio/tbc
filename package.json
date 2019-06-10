@@ -21,7 +21,8 @@
   "dependencies": {
     "express": "^4.17.0",
     "lodash": "^4.17.11",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
