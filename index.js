@@ -20,8 +20,16 @@ router.get('/', function(req, res) {
 
 router.post('/search', function(req, res) {
   const { query = '' } = req.body;
+  const results = [];
 
-  return res.json({ results: [] });
+  if (query === 'polera') {
+    results.push({
+      license: 'Warner',
+      expirationDate: '31/12/2019'
+    });
+  }
+
+  return res.json({ results });
 });
 
 router.post('/create-index', (req, res) => {
